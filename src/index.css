@@ -1,0 +1,149 @@
+  
+:root{
+	--hue: 240;
+	--saturation: 75%;
+
+	--font-size: calc(0.5em + 1vmin);
+	--main-font: 'sans-serif';
+	--max-width: 55em;
+	--line-height: 2em;
+	--code-font: 'monospace';
+	--input-width: 8em;
+}
+
+
+:root{	
+	--background-color: hsl(calc(180 + var(--hue)), 100%, 100%);
+	--highlighter: hsl(calc(180 + var(--hue)), 100%, 95%);
+	--popup-color: hsl(calc(180 + var(--hue)), 100%, 98%);
+
+	--main-color: hsl(var(--hue), var(--saturation), 25%);
+	--accent-color: hsl(var(--hue), var(--saturation), 50%);
+}
+
+summary>* {
+	display: inline-block;
+}
+
+
+html {
+	font-size: var(--font-size);
+	background-color: var(--background-color);
+	font-family: var(--main-font), sans-serif;
+}
+
+
+body {
+	line-height: var(--line-height);
+	margin: auto;
+	padding: 1em;
+	max-width: var(--max-width);
+}
+
+main, article {
+	color: var(--main-color);
+}
+
+h1 {
+	border-bottom: solid thin var(--accent-color);
+	text-align: center;
+}
+
+menu {
+	display: flex;
+	justify-content: center;
+}
+
+
+a {
+	text-decoration: none;
+	background-color: var(--highlighter);
+	cursor: pointer;
+}
+
+mark {
+	background-color: var(--highlighter);
+	color: var(--accent-color);
+}
+
+
+code {
+	font-family: var(--code-font), monospace;
+	word-break: break-all;
+	background-color: var(--highlighter);
+	white-space: pre-wrap;
+}
+
+pre {
+	background-color: var(--highlighter);
+}
+
+
+
+icon {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+	font-size: larger;
+}
+
+icon:hover {
+	cursor: pointer;
+}
+
+
+
+ul {
+	padding-left: 1.5em;
+}
+
+
+fieldset {
+	border: outset thin;
+}
+
+fieldset>label {
+	display: inline-flex;
+	flex-direction: column;
+	max-width: var(--input-width);
+	margin: 0.5em 1em;
+	color: var(--accent-color); 
+}
+
+button {
+	font-size: medium;
+	border: outset;
+	margin: 0 .5em;
+	padding: .5em;
+}
+
+label {
+	color: var(--accent-color)
+}
+
+label>input {
+	width: 100%;
+}
+
+input:required {
+	border-color: var(--highlighter);
+}
+
+form input {
+	max-width: var(--input-width);
+}
+
+
+
+modal {
+	position: fixed;
+	border: solid;
+	background-color: var(--popup-color);
+	padding: 1em;
+}
+
+form {
+	margin: 1em 0;
+}
+
+
